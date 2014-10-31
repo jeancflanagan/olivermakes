@@ -158,7 +158,27 @@ blockquote {
 }
 
 hr {
-  border: .0625em solid darkgray;
+  background-color: inherit;
+  margin: 1.375em 2.75em;
+  line-height: 1.5;
+}
+
+hr:before {
+  content: "";
+  border-bottom: .0625em solid darkgray;
+  display: block;
+  height: 1em;
+}
+
+hr:after {
+  background-color: inherit;
+  content: "☉";
+  color: darkgray;
+  display: block;
+  height: 1em;
+  margin: -.7777777777em auto 0;
+  text-align: center;
+  width: 2em;
 }
 
 code,
