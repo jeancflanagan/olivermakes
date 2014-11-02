@@ -122,6 +122,7 @@ article {
 /*** Basic structure and typography ***/
 
 html {
+  color: hsla(205, 10%, 12%, 1);
   font: 400 16px/1.4375 'ratio', 'Helvetica Neue', 'Roboto', Arial, sans-serif;
   font: 400 1rem/1.4375 'ratio', 'Helvetica Neue', 'Roboto', Arial, sans-serif;
   height: 100%;
@@ -156,7 +157,7 @@ h5 {
 
 article:last-child > *:last-child::after {
   content: '⊙';
-  color: silver;
+  color: hsla(205, 10%, 85%, 1);
   display: block;
   margin: 1.375em auto;
   text-align: center;
@@ -164,17 +165,17 @@ article:last-child > *:last-child::after {
 
 a,
 a:visited {
-  color: royalblue;
+  color: hsla(205, 85%, 40%, 1);
   text-decoration: underline;
 }
 
 a:hover,
 a:focus {
-  color: darkorange;
+  color: hsla(5, 85%, 40%, 1);
 }
 
 a:focus {
-  outline: solid .125em darkorange;
+  outline: solid .125em hsla(5, 85%, 40%, 1);
 }
 
 ul {
@@ -182,11 +183,11 @@ ul {
 }
 
 blockquote {
-  background-color: gainsboro;
+  background-color: hsla(205, 10%, 85%, 1);
 }
 
 hr {
-  border: .0625em solid darkgray;
+  border: .0625em solid hsla(205, 10%, 18%, 1);
 }
 
 code,
@@ -200,7 +201,7 @@ samp {
 code,
 pre,
 samp {
-  background-color: gainsboro;
+  background-color: hsla(205, 10%, 85%, 1);
 }
 
 p > code,
@@ -216,13 +217,13 @@ pre > code {
 }
 
 blockquote p > code {
-  background-color: white;
+  background-color: hsla(205, 10%, 92%, 1);
 }
 
 kbd > kbd {
-  background-color: black;
+  background-color: hsla(205, 10%, 12%, 1);
   border-radius: .25em;
-  color: white;
+  color: hsla(205, 10%, 92%, 1);
   font: 300 .8125em/1 'Open Sans', sans-serif;
   padding: .0625em .5em;
 }
@@ -233,7 +234,7 @@ kbd > kbd + b {
 } /* <kbd><kbd>cmd</kbd> <b class="kbd-plus">+</b> <kbd>C</kbd></kbd> */
 
 mark {
-  background-color: palegoldenrod;
+  background-color: hsla(62, 30%, 80%, 1);
   padding: .0625em;
 }
 
@@ -247,12 +248,12 @@ mark > code {
 
 .singel,
 .dubbel {
-  background-color: whitesmoke;
+  background-color: hsla(205, 10%, 92%, 1);
 }
 
 .photo {
-  background-color: dimgray;
-  color: white;
+  background-color: hsla(205, 10%, 24%, 1);
+  color: hsla(205, 10%, 92%, 1);
 }
 
 blockquote,
@@ -263,8 +264,8 @@ blockquote,
 }
 
 .ancillary {
-  background-color: dimgray;
-  color: white;
+  background-color: hsla(205, 10%, 24%, 1);
+  color: hsla(205, 10%, 92%, 1);
 }
 
 /***! END Page layouts ***/
