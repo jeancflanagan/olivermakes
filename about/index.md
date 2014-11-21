@@ -8,7 +8,7 @@ date: 2014-10-31 18:25
 image:
   - src: 2011-11-10-oliver-bench-jeancflanagan-ccbync.jpg
     alt: 'Oliver Pattison sitting on a bench'
-    caption: 'Photo credit: [Jean Flanagan](http://jeancflanagan.com) – CC BY-NC'
+    caption: '<p>That’s me!</p><i class="credit">Photo credit: <cite><a href="http://jeancflanagan.com">Jean Flanagan</a></cite> CC BY-NC.</i>'
     date: 2011-11-10
     camera: 'Nikon D3000'
     lens: 'Nikon DX 55-200 mm f/4.0-5.6'

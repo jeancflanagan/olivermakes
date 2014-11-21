@@ -259,6 +259,10 @@ mark > code {
   vertical-align: text-bottom; /* fix for alignment issue */
 }
 
+cite {
+  font-style: normal;
+}
+
 /***! END Basic styles ***/
 
 /*** Site headers and footers ******************/
@@ -564,6 +568,16 @@ article figure {
   margin: 5% calc(-1em) 0;
   max-width: none;
   width: calc(100% + 2em);
+}
+
+figure .credit {
+  background: gainsboro;
+  display: block;
+  float: right;
+  font-size: 1rem;
+  margin: -2.5em -12.5% 0 0;
+  padding: .5em .75em;
+  max-width: 37.5%;
 }
 
 /***! END Image styles ***/
