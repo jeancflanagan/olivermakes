@@ -1,22 +1,30 @@
----
-layout: fundamental
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
 
----
+<body class="singel{% if page.option contains 'dark' %} dark{% endif %}">
 
-<body class="singel">
+{% include container/banner.html %}
+{% include block/menu.html %}
 
-{% include site-header.html %}
+  <article class="h-entry core" role="main">
 
-{% include page-header.html %}
+{% if page.option contains 'hero' %}{% include block/hero.html %}{% endif %}
+{% include block/core-title.html %}
 
-  <article role="main">
+    <div class="e-content{% if page.title == 'About' %} h-card{% endif %} content">
+
+{% include block/project.html %}
 
 {{ content }}
 
+    </div>
+
+{% include block/core-footer.html %}
+
   </article>
 
-{% include page-footer.html %}
-
-{% include site-footer.html %}
+{% include container/end.html %}
 
 </body>
+</html>

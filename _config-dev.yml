@@ -1,0 +1,6 @@
+# Site configuration
+
+## Sass configuration
+sass:
+  sass_dir: _sass
+  style: expanded

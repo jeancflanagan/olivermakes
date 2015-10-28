@@ -3,10 +3,14 @@ title: 'About'
 layout: singel
 option:
   - no-title
-  - hero-srcset
+  - hero
   - code
+  - code-block
+  - srcset
+category: meta
 date: 2014-10-31 18:25
-updated: 2014-11-29 09:54
+updated: 2015-08-31 05:48
+description: 'A short biography of Oliver Pattison, as well as details about how this website was made.'
 image:
   - src: 2011-11-10-oliver-bench-jeancflanagan-ccbync.jpg
     alt: 'Oliver Pattison sitting on a bench'
@@ -21,26 +25,27 @@ image:
 
 ---
 
-I am Oliver Pattison, a designer focused on the future of the web. My main interests are archiving, usable and universal design, mobile technology, and photography.
+I am <span class="p-name">Oliver Pattison</span>, a designer focused on the future of the web. My main interests are archiving, usable and universal design, mobile technology, and photography.
 
 I currently live in Washington, DC. I am originally from New York City.
 
-<div class="feature">I am available for hire. <a href="mailto:{{ site.author.email }}" rel="me">Get in touch</a> by email if you have a project in mind.</div>
+I’m employed full-time but still available to work on small projects. [Get in touch](mailto:{{ site.author.email }}){:.u-email rel="me"} by email if you have a project in mind.
+{:.focus}
 
 ## About this site
 
 This website is an archive for my work, featuring:
 
-- **[Writing](/writing)**, a collection of quick notes as well as longer essays
-- **[Photography](/photos)**, a collection of images documenting details of my environment
-- **[Projects](/projects)**, documentation and reflections on professional and open source work
+- **[Writing](/writing/)**, a collection of quick notes as well as longer essays
+- **[Photography](/photography/)**, a collection of images documenting details of my environment
+- **[Projects](/projects/)**, documentation and reflections on professional and open source work
 
-**[Subscribe]({{ site.link.subscribe.full }})** or do whatever else you want to this site’s Atom feed.
+**[Subscribe]({{ site.link.subscribe.full }})** to this site’s Atom feed. Or subscribe to filtered feeds for my [writing]({{ site.link.subscribe.writing }}), [photography]({{ site.link.subscribe.photography }}), and [projects]({{ site.link.subscribe.projects }}).
 
 {% capture influences %}
 # Influences
 
-These people and their creative works inspired elements of the site – in particular: typography, proportion and design process.
+These people and their creative works inspired elements of the site – in particular its typography, proportion, and design process.
 
 ## People
 
@@ -110,15 +115,11 @@ I designed the site myself, so most of the source was written by me by hand. Exc
 
 ### Attribution
 
-Proper CC BY-NC attribution with a link and credit would look like this:
+Proper CC BY-NC attribution with a link and credit would look like: **“The title” [Oliver Pattison]({{ site.url }}) [CC BY-NC]({{ site.link.attribution }})** or:
 
-{% highlight html %}
+```html
 “The title” <a href="{{ site.url }}">Oliver Pattison</a> <a href="{{ site.link.attribution }}">CC BY-NC</a>
-{% endhighlight %}
-
-or:
-
-> “The title” [Oliver Pattison]({{ site.url }}) [CC BY-NC]({{ site.link.attribution }})
+```
 
 If you have any questions about licensing or use of content from the site, please [contact me by email](mailto:{{ site.author.email }}).
 
@@ -126,7 +127,7 @@ If you have any questions about licensing or use of content from the site, pleas
 
 ## Elsewhere on the web
 
-Nearly every significant thing I read or look at is archived on **[Pinboard]({{ site.link.pinboard }})**. It is my external brain and my favorite thing on the web. It is as complete an archive as I can keep of my reading online.
+Nearly every significant thing I read or look at is archived on **[Pinboard]({{ site.link.pinboard }}){:rel="me"}**. It is my external brain and my favorite thing on the web. It is as complete an archive as I can keep of my reading online.
 
 I am **[@olivermakes on Twitter]({{ site.link.twitter }}){:rel="me"}**.
 

@@ -4,6 +4,9 @@ author:
   email: oliverpattison@gmail.com
 description: 'I am Oliver Pattison, a designer focused on the future of the web.'
 
+# Content
+
+## Referenced URLs (internal and external links for inline use)
 link:
   attribution: http://creativecommons.org/licenses/by-nc/4.0/
   flickr: https://www.flickr.com/photos/ok-oyot
@@ -15,25 +18,81 @@ link:
   source: http://github.com/opattison/olivermakes
   subscribe:
     full: http://olivermak.es/full.xml
+    writing: http://olivermak.es/writing/feed.xml
+    photography: http://olivermak.es/photography/feed.xml
+    projects: http://olivermak.es/projects/feed.xml
   tumblr: http://olivermakes.tumblr.com
   twitter: http://twitter.com/olivermakes
   vsco: http://olivermakes.vsco.co
 
+## Collections
+
+collections:
+  patterns:
+    output: true
+    permalink: patterns/:path/
+
+# Site configuration
+
+## Gems configuration
+gems:
+  - jekyll-archives
+  - sass
+  - octopress-autoprefixer
+
+## Markdown configuration
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+## Permalink configuration
+permalink: /:year/:month/:title/
+
+## Jekyll Archives configuration
+jekyll-archives:
+  enabled:
+    - year
+    - month
+    - categories
+    - tags
+  layouts:
+    year: archive-time
+    month: archive-time
+    category: archive-category
+    tag: archive-tag
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    tag: '/label/:name/'
+    category: '/:name/archive/'
+
+## Sass configuration
+sass:
+  sass_dir: _sass
+  style: compressed
+
+## Project configuration
+exclude: [s3_website.yml, Rakefile]
+
+## Configuration URLs
 domain: olivermak.es
 url: http://olivermak.es
-
-patterns-url: http://olivermak.es/patterns
-image-url: http://static.olivermak.es/images
-script-url: http://static.olivermak.es/scripts
-fragments-url: http://static.olivermak.es/fragments
-
+patterns-url: /patterns
+image-url: /resources/images
+icon-url: /resources/icons
+style-url: /resources/style
+script-url: /resources/scripts
+fragments-url: /resources/fragments
 source-url:
   repo: https://github.com/opattison/olivermakes
   blob: https://github.com/opattison/olivermakes/blob/master
   commits: https://github.com/opattison/olivermakes/commits/master
 
+## srcset implementation
 wide-sizes: '(min-width: 140em) 1440px, (min-width: 115em) 1260px, (min-width: 95em) 1080px, (min-width: 60em) 900px, (min-width: 45em) 720px, 100vw'
-grid2-sizes: '(min-width: 140em) 691px, (min-width: 115) 605px, (min-width: 95em) 518px, (min-width: 60em) 432px, (min-width: 45em) 720px, 100vw'
+grid2-sizes: '(min-width: 140em) 691px, (min-width: 115em) 605px, (min-width: 95em) 518px, (min-width: 60em) 432px, (min-width: 45em) 720px, 100vw'
+project-sizes: '(min-width: 115em) 756px, (min-width: 90em) 648px, (min-width: 70em) 540px, (min-width: 60em) 740px, (min-width: 45em) 620px, (min-width: 30em) calc(100vw - 4em), calc(100vw - 2em)'
 srcset1440:
   - 480
   - 640
@@ -48,107 +107,11 @@ srcset1080:
   - 720
   - 900
   - 1080
+srcset_project:
+  - 480
+  - 720
+  - 1080
 
-markdown: kramdown
-permalink: /:year/:month/:title/
-
-exclude: [s3_website.yml, Rakefile, _images]
-
-# shades
-
-shade:
-  - name: black
-    hsl: 'hsla(204, 10%, 10%, 1)'
-    hex: '#1c1f22'
-  - name: gray1
-    hsl: 'hsla(204, 10%, 18%, 1)'
-    hex: '#292f32'
-  - name: gray2
-    hsl: 'hsla(204, 10%, 24%, 1)'
-    hex: '#373e43'
-  - name: gray3
-    hsl: 'hsla(204, 10%, 32%, 1)'
-    hex: '#49535a'
-  - name: gray4
-    hsl: 'hsla(204, 10%, 40%, 1)'
-    hex: '#5c6870'
-  - name: gray6
-    hsl: 'hsla(204, 10%, 56%, 1)'
-    hex: '#84919a'
-  - name: gray7
-    hsl: 'hsla(204, 10%, 80%, 1)'
-    hex: '#c7cdd1'
-  - name: gray8
-    hsl: 'hsla(204, 10%, 88%, 1)'
-    hex: '#dde1e3'
-  - name: gray9
-    hsl: 'hsla(204, 10%, 93%, 1)'
-    hex: '#dde1e3'
-  - name: offwhite
-    hsl: 'hsla(204, 10%, 96%, 1)'
-    hex: '#f4f5f6'
-  - name: white
-    hsl: 'hsla(204, 10%, 98%, 1)'
-    hex: '#f9fafa'
-
-#colors
-
-color:
-  - name: blue
-    hsl: 'hsla(204, 50%, 45%, 1)'
-    hex: '#397eac'
-  - name: boldblue
-    hsl: 'hsla(204, 80%, 40%, 1)'
-    hex: '#1476b8'
-  - name: grayblue
-    hsl: 'hsla(204, 30%, 80%, 1)'
-    hex: '#bdcfdb'
-  - name: violet
-    hsl: 'hsla(225, 35%, 52%, 1)'
-    hex: '#5a6faf'
-  - name: red
-    hsl: 'hsla(4, 60%, 50%, 1)'
-    hex: '#cc3d33'
-  - name: boldred
-    hsl: 'hsla(4, 80%, 40%, 1)'
-    hex: '#bd1b0f'
-  - name: pink
-    hsl: 'hsla(4, 30%, 80%, 1)'
-    hex: '#dbbfbd'
-  - name: orange
-    hsl: 'hsla(22, 50%, 44%, 1)'
-    hex: '#a86138'
-  - name: gold
-    hsl: 'hsla(44, 50%, 44%, 1)'
-    hex: '#a88a38'
-  - name: lightgold
-    hsl: 'hsla(44, 30%, 88%, 1)'
-    hex: '#eae5d7'
-  - name: green
-    hsl: 'hsla(144, 50%, 35%, 1)'
-    hex: '#2d8650'
-  - name: bluegreen
-    hsl: 'hsla(184, 32%, 38%, 1)'
-    hex: '#427c80'
-
-# semi-transparent shades and colors
-
-transparent:
-  - name: black-80
-    hsl: 'hsla(204, 10%, 10%, .8)'
-  - name: gray1-80
-    hsl: 'hsla(204, 10%, 18%, .8)'
-  - name: gray2-80
-    hsl: 'hsla(204, 10%, 24%, .8)'
-  - name: gray3-80
-    hsl: 'hsla(204, 10%, 32%, .8)'
-  - name: gray8-80
-    hsl: 'hsla(204, 10%, 80%, .8)'
-  - name: boldblue-80
-    hsl: 'hsla(204, 50%, 45%, .8)'
-  - name: grayblue-50
-    hsl: 'hsla(204, 30%, 80%, .5)'
-  - name: pink-50
-    hsl: 'hsla(4, 30%, 80%, .5)'
-  - name: pure-1
-    hsl: 'hsla(0, 0%, 100%, .01)'
+## Mapbox authentication and configuration
+mapbox-key: pk.eyJ1Ijoib3BhdHRpc29uIiwiYSI6Il9DU3p1MEkifQ.3cvRQB5hVIONMpDAflBUNw
+photo-mapid: opattison.942a5f69

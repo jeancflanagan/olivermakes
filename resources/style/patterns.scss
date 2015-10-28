@@ -1,0 +1,135 @@
+---
+---
+@import 'variables';
+
+.edgeless {
+  background-color: $whiter;
+}
+
+.grid--swatches {
+  flex-flow: row wrap;
+  list-style-type: none;
+  justify-content: flex-start;
+}
+
+.pattern--swatch {
+  flex: 1 0 100%;
+  font: 400 .625em/1.5 $source-code-pro;
+  margin-top: 1em;
+}
+
+.pattern--swatch figure {
+  height: 16em;
+  position: relative;
+}
+
+.pattern--swatch figcaption {
+  background-color: $gray07-80;
+  border-bottom: none;
+  bottom: 0;
+  margin: 0;
+  padding: .5em 0!important;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.pattern--typography {
+  margin-top: 1em;
+}
+
+.sans {
+  font-family: $ratio;
+}
+
+.monospace {
+  font-family: $source-code-pro;
+  font-size: .8125em;
+}
+
+.w300 {
+  font-weight: 300;
+}
+
+.w400 {
+  font-weight: 400;
+}
+
+.w500 {
+  font-weight: 500;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.pattern--element {
+  margin-top: 4em;
+}
+
+.pattern-meta {
+  background-color: $gray06;
+  clear: both;
+  color: $black;
+  margin-top: 1em;
+}
+
+.pattern-meta summary {
+  background-color: $gray03;
+  color: $whiter;
+  padding: 1em;
+  transition: all 160ms;
+}
+
+.pattern-meta summary:hover,
+.pattern-meta summary:focus {
+  background-color: $blue;
+  outline: none;
+}
+
+.pattern-meta figure {
+  margin-top: 0;
+  padding: 1em;
+}
+
+.pattern-meta textarea {
+  background-color: $gray02;
+  color: $whiter;
+  font-family: $source-code-pro;
+  font-size: .75em;
+  min-height: 5.5em;
+  padding: .5em 1em;
+  width: 100%;
+}
+
+.pattern-meta figcaption {
+  margin: .5em 0 0;
+  padding: 0;
+}
+
+.pattern-meta figcaption strong {
+  font-weight: 500;
+}
+
+.pattern-meta figcaption p {
+  font-size: .875em;
+  text-align: left;
+}
+
+@media screen and (min-width: 22.5em) {
+  .pattern--swatch {
+    flex: 0 0 50%;
+  }
+}
+
+@media screen and (min-width: 45em) {
+  .pattern-meta summary {
+    font-size: 1.125em;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .pattern--swatch {
+    flex: 0 0 25%;
+  }
+}

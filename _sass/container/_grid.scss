@@ -1,0 +1,14 @@
+/* Flexing grid container for images and other items */
+.grid {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.grid--wide {
+  @include bleed-image(1em);
+}
+
+.grid figure + figure {
+  margin-top: 1em;
+}

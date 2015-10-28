@@ -1,0 +1,8 @@
+/* Site-wide menu navigation link to `routing` navigation. */
+.menu {
+  @include menu;
+}
+
+.menu-action {
+  @include action;
+}
