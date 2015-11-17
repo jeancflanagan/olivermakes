@@ -13,7 +13,7 @@ local_site     = "_site"
 ## "rake serve"
 desc "custom Jekyll serve for local development"
 task :serve do
-  system "jekyll serve -H 10.0.0.13 --config _config.yml,_config-dev.yml"
+  system "jekyll serve --config _config.yml,_config-dev.yml"
 end
 
 ## "rake optimize" to optimize a folder of images in ImageOptim-CLI
@@ -41,10 +41,4 @@ task :prod do
   system "jekyll build"
   system "DEPLOY=production s3_website push --site #{local_site}"
   puts "## Deployed site to S3 ##"
-end
-
-
-def get_stdin(message)
-  print message
-  STDIN.gets.chomp
 end

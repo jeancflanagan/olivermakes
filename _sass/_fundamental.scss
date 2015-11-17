@@ -8,11 +8,23 @@ html {
           font-feature-settings: 'liga', 'dlig';
   font-variant-ligatures: common-ligatures;
   text-rendering: optimizeLegibility;
+
+  @include density-query {
+    font: 300 1rem/1.4375 $ratio;
+  }
+
+  @include min-width(l01) {
+    line-height: 1.5;
+  }
 }
 
 strong,
 b {
   font-weight: 500;
+
+  @include density-query {
+    font-weight: 400;
+  }
 }
 
 em,
@@ -23,6 +35,10 @@ i {
 dfn {
   font-style: normal;
   font-weight: 500;
+
+  @include density-query {
+    font-weight: 400;
+  }
 }
 
 cite {
@@ -34,7 +50,6 @@ small {
 }
 
 /* Headings */
-
 h1,
 h2 {
   line-height: 1.125;
@@ -81,7 +96,6 @@ h5 {
 }
 
 /* Axiomatic spacing */
-
 p + *,
 * + p,
 * + h1,
@@ -95,7 +109,6 @@ p + *,
 }
 
 /* Links */
-
 a {
   transition-duration: 320ms;
   transition-property: color, background-color, border-bottom;
@@ -108,7 +121,6 @@ a:focus {
 }
 
 /* Lists */
-
 ul,
 ol {
   list-style-position: inside;
@@ -168,11 +180,26 @@ li {
 }
 
 /* Blockquotes */
-
 blockquote {
   border-left: solid .25em;
   margin: 2em 0 2em -1em;
   padding-left: .75em;
+
+  @include min-width(s03) {
+    border-width: .5em;
+    margin-left: -2em;
+    padding-left: 1.5em;
+  }
+
+  @include min-width(s04) {
+    border-width: .75em;
+    margin-left: -2.5em;
+    padding-left: 1.75em;
+  }
+
+  @include min-width(l01) {
+    margin-left: 0;
+  }
 }
 
 blockquote footer {
@@ -182,7 +209,6 @@ blockquote footer {
 }
 
 /* Footnotes */
-
 sup[id] {
   margin: 0 .125em;
   top: 0;
@@ -205,19 +231,29 @@ sup[id] a::before {
 }
 
 /* Figcaptions */
-
 figcaption {
   margin: 0 0 .5em;
   padding: .25em 1em;
+
+  @include min-width(m01) {
+    padding: .5em 1em;
+  }
 }
 
 figcaption p {
   font-size: .875em;
   margin: 0;
+
+  @include min-width(m01) {
+    font-size: .75em;
+  }
+
+  @include min-width(l01) {
+    text-align: right;
+  }
 }
 
 /* Inline styles */
-
 hr {
   border: 0;
   height: .2em;
@@ -233,7 +269,7 @@ samp {
 p > code,
 li > code,
 samp {
-  border: solid 1px ;
+  border: solid 1px;
   border-radius: .25em;
   margin: 0 -.03125em;
   padding: .0625em .25em 0;
