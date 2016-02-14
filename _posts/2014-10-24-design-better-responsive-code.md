@@ -4,7 +4,7 @@ layout: singel
 option:
   - code
   - hero
-  - index-image
+  - no-imgix-source
 category: 'writing'
 tags:
   - 'css'
@@ -16,12 +16,13 @@ updated: 2015-03-02 18:38
 drafted: 2014-10-24 16:15
 unique_id: 2014-10-24:better-responsive-code
 description: 'A walkthrough of an approach to styling code blocks for responsive websites and technical documentation.'
+image_index: /images/index/2014-11-26-hero-design-better-css-desat.png
 image:
-  - src: 2014-11-26-hero-design-better-css-desat.png
+  - src: /images/2014-11-26-hero-design-better-css-desat.png
     alt: ''
-  - src: 2014-11-27-without-word-wrap.png
+  - src: /images/2014-11-27-without-word-wrap.png
     alt: 'A sample of layout-breaking code without word-wrap'
-  - src: 2014-11-27-without-break-word.png
+  - src: /images/2014-11-27-without-break-word.png
     alt: 'A sample of layout-breaking code without break-word'
 
 ---
@@ -36,18 +37,16 @@ So how bad is it when code or any other long content breaks a layout? Here is wh
 
 <figure class="image--narrow screenshot">
   <img
-    src="{{ site.image_url }}/{{ page.image[1].src }}" 
-    alt="{{ page.image[1].alt }}"
-  >
+    src="{{ page.image[1].src | imgix_url }}"
+    alt="{{ page.image[1].alt }}">
 </figure>
 
 Here is a sample with default values for `overflow-wrap`:
 
 <figure class="image--narrow screenshot">
   <img
-    src="{{ site.image_url }}/{{ page.image[2].src }}" 
-    alt="{{ page.image[2].alt }}"
-  >
+    src="{{ page.image[2].src | imgix_url }}"
+    alt="{{ page.image[2].alt }}">
 </figure>
 
 I think these samples speak for themselves to explain why these declarations are needed for a responsive code block. With both of them not implemented, nearly every code block on this page runs off the page, breaking the layout on small and large screens alike.
@@ -56,7 +55,7 @@ So how do we fix this?
 
 ## Prevent breaking words and lines
 
-In this example for “front-end” web code blocks, I am using styles that are robust in that they won’t be able to break the layout.[^1]
+In this example for “front-end” web code blocks, I am using styles that are robust in that they won’t be able to break the layout. [^1]
 
 ```css
 body {
@@ -165,7 +164,7 @@ The following shows the scroll method using the HTML sample from earlier.
 <div style="color: hsla(204, 10%, 80%, 1); font-size: .75em; font-weight: 400; padding: .5em; position: absolute; bottom: 0; right: 0;">Scroll ⇀</div>
 </div>
 
-I believe this method is particularly poorly suited for HTML or any other code with comments in it. It is responsive, but not as adaptive to different screens as the `break-word` method.[^2]
+I believe this method is particularly poorly suited for HTML or any other code with comments in it. It is responsive, but not as adaptive to different screens as the `break-word` method. [^2]
 
 But fortunately we do not have to rely on the `scroll` method. For HTML and CSS blocks, `break-word` and `pre-wrap` solve a lot of inherit problems with responsive code block design.
 

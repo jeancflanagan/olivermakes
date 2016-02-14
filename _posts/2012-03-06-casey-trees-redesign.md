@@ -2,8 +2,7 @@
 title: 'Responsive redesign for Casey&nbsp;Trees'
 layout: dubbel
 option:
-  - feature
-  - index-image
+  - no-imgix-source
 category: 'projects'
 tags:
   - 'design'
@@ -16,20 +15,21 @@ drafted: 2015-02-23 13:02
 unique_id: 2012-03-06:casey-trees-redesign
 period: 2011-11 to 2012-03
 description: 'My work on a redesign for an urban forestry non-profit, in the early days of responsive web design.'
-feature-description: 'Responsive design is about more than merely reaching a diversity of screens. This is my work on a redesign for an urban forestry non-profit, in the early days of responsive web design.'
 project:
   url: http://caseytrees.org/
+image_index: /images/index/2015-02-23-ct-logo.svg
 image:
-  - src: 2015-02-23-ct-logo.svg
+  - src: /images/2015-02-23-ct-logo.svg
+    src_png: /images/2015-02-23-ct-logo.png
     background: 'site.shade.white'
     description: 'Logo SVG'
-  - src: 2012-04-27-casey-trees-homepage-desktop.jpg
-    alt: 'The Casey Trees homepage on a desktop early on after the redesign, with a series of slides and all navigation items visible, including events and the Tree Report Card.'
+  - src: /images/2012-04-27-casey-trees-homepage-desktop.jpg
+    alt: 'The Casey Trees home page on a desktop early on after the redesign, with a series of slides and all navigation items visible, including events and the Tree Report Card.'
     date: 2012-04-27
-    caption: 'The homepage less than two months after the redesign.'
+    caption: 'The home page less than two months after the redesign.'
     description: 'Taken with Google Chrome on a Windows computer in 2012, shortly after the redesign.'
-  - src: 2013-01-09-casey-trees-homepage-android.jpg
-    alt: 'The Casey Trees homepage on an Android mobile browser'
+  - src: /images/2013-01-09-casey-trees-homepage-android.jpg
+    alt: 'The Casey Trees home page on an Android mobile browser'
     date: 2013-01-09
     description: 'Taken on a Galaxy Nexus using Google Chrome for Android in 2013'
 
@@ -44,20 +44,20 @@ My primary responsibilities were:
 - Writing, editing, photo curation, and content strategy – with hundreds of pages and a decade’s worth of programs to review, filter, and edit.
 - Ongoing support after the redesign, supporting the organization’s content and design needs after the initial launch.
 
-**My most important role on the project, however, was as an advocate for responsive web design.** By responsive design, I mean that our goal was to develop a site that would cater to multiple screen sizes, without the false constraint of assuming only a “desktop” browser context.[^1] When we were planning to redesign the website in 2011, responsive design was not yet implemented widely. The web changes quickly. While the approach is now viewed by many leaders in user experience design as an *essential* part of designing for an uncertain future, back then we were taking a decisive step towards a more flexible experience, in our small corner of the web.
+**My most important role on the project, however, was as an advocate for responsive web design.** By responsive design, I mean that our goal was to develop a site that would cater to multiple screen sizes, without the false constraint of assuming only a “desktop” browser context. [^1] When we were planning to redesign the website in 2011, responsive design was not yet implemented widely. The web changes quickly. While the approach is now viewed by many leaders in user experience design as an *essential* part of designing for an uncertain future, back then we were taking a decisive step towards a more flexible experience, in our small corner of the web.
 
 We turned the project around in only a few months, with design and content work starting in December 2011 and the website launching in March 2012.
 
-<div class="grid grid--wide">
+<div class="grid--wide">
 <figure class="grid-figure--66 grid-figure screenshot">
   <img
-    src="{{ site.image_url }}/{{ page.image[1].src }}"
+    src="{{ page.image[1].src | imgix_url }}"
     alt="{{ page.image[1].alt }}"
   >
 </figure>
 <figure class="grid-figure--33 grid-figure screenshot">
   <img
-    src="{{ site.image_url }}/{{ page.image[2].src }}"
+    src="{{ page.image[2].src | imgix_url }}"
     alt="{{ page.image[2].alt }}"
   >
 </figure>

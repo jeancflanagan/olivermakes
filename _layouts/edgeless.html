@@ -2,12 +2,13 @@
 <html lang="en">
 {% include head.html %}
 
-<body {% if page.option contains 'error' %}id="error" {% endif %}class="edgeless{% if page.option contains 'dark' %} dark{% endif %}">
+<body {% if page.option contains 'error' %}id="error" {% endif %}class="edgeless">
 
 {% include container/banner.html %}
-{% include block/menu.html %}
 
-  <article class="h-entry core" role="main">
+  <article id="maincontent" class="h-entry core" role="main">
+
+{% include block/pattern-nav.html %}
 
 {% include block/core-title.html %}
 
@@ -19,11 +20,13 @@
 
     </div>
 
-{% unless page.option contains 'error' %}{% include block/core-footer.html %}{% endunless %}
+{% unless page.option contains 'error' or page.option contains 'patterns' %}{% include block/core-footer.html %}{% endunless %}
+
+{% include block/pattern-nav.html %}
 
   </article>
 
-{% include container/end.html %}
+{% unless page.option contains 'error' %}{% include container/end.html %}{% endunless %}
 
 </body>
 </html>

@@ -1,11 +1,7 @@
 ---
 title: 'Meridian Hill Park'
 layout: edgeless
-option:
-  - dark
-  - index-image
-  - map-meta
-  - srcset
+theme: dark
 category: 'photography'
 tags:
   - 'dc'
@@ -14,7 +10,7 @@ updated: 2015-06-06 13:20
 unique_id: 2015-06-06:meridian-hill
 description: 'A single shallow shot at a local DC park fountain walkway.'
 image:
-  - src: 2014-02-22-meridian-hill-olivermakes-ccbync.jpg
+  - src: /images/2014-02-22-meridian-hill-olivermakes-ccbync.jpg
     alt: 'Pebble-stone ground in Meridian Hill Park'
     caption: 'Meridian Hill Park in DC in early 2014. Re-processed with VSCO Film 04 (Fuji Astia 100F Balance Warm).'
     date: 2014-02-22
@@ -34,9 +30,8 @@ image:
 ---
 
 <figure class="image--wide">
-  <img
-    src="{{ site.image_url }}/{{ page.image[0].src }}"
-    sizes="{{ site.wide-sizes }}"
-    srcset="{% for srcset1440 in site.srcset1440 %}{{ site.image_url }}/{{ site.srcset1440[forloop.index0] }}/{{ page.image[0].src }} {{ site.srcset1440[forloop.index0] }}w{% if forloop.last == false %}, {% endif %}{% endfor %}"
-    alt="{{ page.image[0].alt }}">
+  {% assign count = 0 %}
+  {% assign quality = 70 %}
+  {% include block/srcset.html %}
+  <figcaption>{{ page.image[0].caption | markdownify }}</figcaption>
 </figure>

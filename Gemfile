@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '~> 3.0'
-gem 'jekyll-archives', github: 'jekyll/jekyll-archives'
+gem 'jekyll', '~> 3.0.2'
 
-gem 'kramdown'
-gem 'rouge'
-gem 'sass'
+group :jekyll_plugins do
+  gem 'jekyll-archives'
+  gem 'rouge'
+  gem 'kramdown'
+  gem 'jekyll-imgix'
+  gem 'sass'
+end
 
 gem 's3_website'
-gem 'rake'
-gem 'image_optim'
-gem 'image_optim_pack'

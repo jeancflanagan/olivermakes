@@ -1,9 +1,10 @@
 ---
 title: 'Jekyll Version of Pattern Primer'
-layout: dubbel
+layout: singel
 option:
-  - sample-srcset
-  - srcset
+  - minor
+  - no-imgix-source
+  - no-image_index
 category: 'projects'
 tags:
   - 'css'
@@ -16,15 +17,15 @@ updated: 2014-12-01 20:30
 drafted: 2014-12-01 12:40
 unique_id: 2014-11-30:pattern-primer
 description: 'A pattern documentation tool for designing websites, based on Jeremy Keith’s Pattern Primer.'
+period: '2013-07 to present'
 project:
   url: http://patternprimer.olivermak.es
   source: https://github.com/opattison/Pattern-Primer-Jekyll
-  period: '2013-07 to present'
 image:
-  - src: 2014-12-01-pattern-primer-project-feature-screen.png
+  - src: /images/2014-12-01-pattern-primer-project-feature-screen.png
     alt: 'A screenshot of Pattern Primer Jekyll'
     date: 2014-12-01
-  - src: 2014-12-01-pattern-primer-headings.png
+  - src: /images/2014-12-01-pattern-primer-headings.png
     alt: 'Heading styles in Pattern Primer Jekyll'
     caption: 'Find out how your headings look and what markup is needed for them with a primer.'
     date: 2014-12-01
@@ -50,9 +51,8 @@ Pattern Primer ([as well as many other similar tools](http://styleguides.io/tool
 
 <figure class="image--narrow screenshot">
   <img
-    src="{{ site.image_url }}/{{ page.image[1].src }}"
-    alt="{{ page.image[1].alt }}"
-  >
+    src="{{ page.image[1].src | imgix_url }}"
+    alt="{{ page.image[1].alt }}">
   <figcaption>{{ page.image[1].caption | markdownify }}</figcaption>
 </figure>
 
@@ -64,8 +64,14 @@ I forked [Jeremy’s source](https://github.com/adactio/Pattern-Primer) from Git
 
 - How Jekyll could be used for a project other than a blog or personal site.
 - How to make an open source Jekyll project that would be reusable for other people with the same goals.
-- How to set up Amazon Web Services (S3 and Cloudfront) for hosting a Jekyll site.
+- How to set up Amazon Web Services (S3 and CloudFront) for hosting a Jekyll site.
 
-- - -
-
+{% capture endnote %}
 **[View Pattern Primer Jekyll live]({{ page.project.url }})** or **[check it out on GitHub]({{ page.project.source }})**.
+
+**[View the original project](https://github.com/adactio/Pattern-Primer)** that this is forked from.
+{% endcapture %}
+
+<aside class="endnote">
+{{ endnote | markdownify }}
+</aside>

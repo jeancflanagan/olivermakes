@@ -3,11 +3,12 @@ title: 'Designing this site: future-friendliness and&nbsp;robustness'
 layout: singel
 option:
   - code
-  - index-image
-category: writing
+  - no-imgix-source
+category: 'writing'
 tags:
   - 'design'
   - 'future'
+  - 'indieweb'
   - 'jekyll'
   - 'web'
 date: 2014-11-06 09:17
@@ -15,8 +16,10 @@ updated: 2014-12-12 02:44
 drafted: 2014-11-06 09:17
 unique_id: 2014-11-06:design-notes-future-friendliness
 description: 'A discussion about designing for the long term, covering HTML, independent publishing, and web hosting.'
+image_index: /images/2014-12-12-futurefriendly.svg
 image:
-  - src: 2014-12-12-futurefriendly.svg
+  - src: /images/2014-12-12-futurefriendly.svg
+    src_png: /images/2014-12-12-futurefriendly.png
     alt: 'future friendly logo'
     caption: 'The [future friendly](http://futurefriendlyweb.com/) movement is a significant inspiration for my approach, in both philosophy and implementation. [#ffly](https://twitter.com/search?q=%23ffly) astronaut logo is licensed [CC BY](http://creativecommons.org/licenses/by/3.0/), modified slightly by me.'
     description: 'hero color is gray3 #49535a; index-image color is gray6 #84919a'
@@ -90,9 +93,9 @@ Another aspect of working with a static site that appeals to me is that I am abl
 
 The trade-off is supposedly an easier user interface for editing and administration, and more flexibility with dynamic content. However, I find a CMS in the WordPress model more intimidating after a couple of years getting comfortable with tools like Jekyll and Git. I like working in a text editor. I have grown to appreciate the power of the command line. The data that I input into my site is under my control because I manage the input and the output from my own computer, rather than relying on someone else’s server.
 
-<figure class="right svg">
+<figure class="extralight right svg">
   <img
-    src="{{ site.image_url }}/{{ page.image[0].src }}"
+    src="{{ page.image[0].src }}"
     alt="{{ page.image[0].alt }}"
   >
   <figcaption>{{ page.image[0].caption | markdownify }}</figcaption>

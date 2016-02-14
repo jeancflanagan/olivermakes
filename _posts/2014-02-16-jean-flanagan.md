@@ -4,9 +4,6 @@ layout: dubbel
 option:
   - code
   - custom-css
-  - index-image
-  - sample-srcset
-  - srcset
 category: 'projects'
 tags:
   - 'design'
@@ -20,39 +17,40 @@ drafted: 2014-12-03 17:10
 unique_id: 2014-02-16:jean-flanagan
 period: 2013-06 to present
 description: 'A personal website for a science education and communication specialist.'
-project: 
+project:
   url: http://jeancflanagan.com
   source: https://github.com/opattison/jeancflanagan
 custom-css: 2014-02-16-jean-flanagan.css
+image_index: /images/index/2014-12-05-jean-flanagan-feature.jpg
 image:
-  - src: 2014-12-05-jean-flanagan-feature.jpg
+  - src: /images/2014-12-05-jean-flanagan-feature.jpg
     alt: 'A screenshot of jeancflanagan.com'
     date: 2014-12-05
-  - src: 2013-07-08-jean-flanagan-early-excerpt.png
+  - src: /images/2013-07-08-jean-flanagan-early-excerpt.png
     alt: 'Two text excerpts from a prototype of Jean’s website'
     caption: 'Content excerpts from the very early stages of the site’s design.'
     date: 2013-07-08
-  - src: 2014-12-05-jean-flanagan-excerpt.png
+  - src: /images/2014-12-05-jean-flanagan-excerpt.png
     alt: 'Two text excerpts from a current version of Jean’s website'
     caption: 'How the same content excerpts turned out in a later design iteration of the site.'
     date: 2014-12-05
-  - src: 2014-12-05-jean-flanagan-large-grid.jpg
+  - src: /images/2014-12-05-jean-flanagan-large-grid.jpg
     alt: 'The grid of posts on the home page on a large desktop screen'
     caption: 'What the grid of posts [on the homepage](http://jeancflanagan.com/) looks like on a large screen. This four-column grid is different from the single-column grid on small-sized screens and the double-column grid on medium-sized screens.'
     date: 2014-12-05
-  - src: 2014-12-05-jean-flanagan-photo-page.jpg
+  - src: /images/2014-12-05-jean-flanagan-photo-page.jpg
     alt: 'A screenshot of the photo layout on a medium-sized browser'
-  - src: 2014-12-05-jean-flanagan-article-mobile.jpg
+  - src: /images/2014-12-05-jean-flanagan-article-mobile.jpg
     alt: 'A screenshot of the writing layout on a phone-sized browser'
     date: 2014-12-05
-  - src: 2014-12-05-jean-flanagan-article-desktop.jpg
+  - src: /images/2014-12-05-jean-flanagan-article-desktop.jpg
     alt: 'A screenshot of the writing layout on a large desktop browser'
     date: 2014-12-05
-  - src: 2014-12-05-jean-flanagan-article-float-image.png
+  - src: /images/2014-12-05-jean-flanagan-article-float-image.png
     alt: 'A screenshot of an image floated right alongside some text in a flexible layout'
     caption: 'The image of Darwin’s finches floats right on larger screens, while it would be layed out in the center on smaller screens. [View this page](http://jeancflanagan.com/2013/communicating-about-evolution-the-danger-of-shortcuts/).'
     date: 2014-12-05
-  - src: 2014-02-16-PhyloPic.ef63437d.Michelle-Site.Scyphozoa.svg
+  - src: /images/2014-02-16-PhyloPic.ef63437d.Michelle-Site.Scyphozoa.svg
     alt: 'Floating jellyfish vector graphic'
     caption: 'A snippet from the [404 page](http://jeancflanagan.com/404.html), using CSS `keyframes` animations to `translate` an SVG image and shift the background color. The vector jellyfish illustration is by [Michelle Site via Phylopic](http://phylopic.org/image/ef63437d-d6f4-4583-9d75-a8c9b19a203d/), licensed [CC BY-NC](http://creativecommons.org/licenses/by-nc/3.0/).'
     license: 'CC BY-NC'
@@ -64,37 +62,34 @@ My partner Jean Flanagan and I have a shared interest in writing, photography, a
 
 ## Features of the site
 
-### Responsive design 
+### Responsive design
 
 The site was designed from small screens up, using flexible images, fluid layouts, and `min-width` media queries. Typographic elements were tested out early on to ensure readability and appropriate scale and tone at different widths.
 
 ### Content first
 
-The first thing we started out with were full-length articles about science, already written and edited. Having content ahead of time meant that the site could be designed around *actual words and images* rather than lorem ipsum filler text. (I really don’t like using lorem ipsum if I can help it.[^1]) It was essential to the process to test typography and proportion with real content.
+The first thing we started out with were full-length articles about science, already written and edited. Having content ahead of time meant that the site could be designed around *actual words and images* rather than lorem ipsum filler text. (I really don’t like using lorem ipsum if I can help it. [^1]) It was essential to the process to test typography and proportion with real content.
 
 Designing in a browser meant that HTML prototypes were an early part of the process, right after sketching and rough notes. In the first week of active development, prototype code was being written that would evolve into the finished product.
 
 <figure class="image--narrow screenshot">
   <img
-    src="{{ site.image_url }}/{{ page.image[1].src }}" 
-    alt="{{ page.image[1].alt }}"
-  >
+    src="{{ page.image[1].src | imgix_url }}"
+    alt="{{ page.image[1].alt }}">
   <figcaption>{{ page.image[1].caption | markdownify }}</figcaption>
 </figure>
 
 <figure class="image--narrow screenshot">
   <img
-    src="{{ site.image_url }}/{{ page.image[2].src }}" 
-    alt="{{ page.image[2].alt }}"
-  >
+    src="{{ page.image[2].src | imgix_url }}"
+    alt="{{ page.image[2].alt }}">
   <figcaption>{{ page.image[2].caption | markdownify }}</figcaption>
 </figure>
 
 <figure class="image--wide screenshot">
   <img
-    src="{{ site.image_url }}/{{ page.image[3].src }}" 
-    alt="{{ page.image[3].alt }}"
-  >
+    src="{{ page.image[3].src | imgix_url }}"
+    alt="{{ page.image[3].alt }}">
   <figcaption>{{ page.image[3].caption | markdownify }}</figcaption>
 </figure>
 
@@ -106,25 +101,22 @@ Jean takes [beautiful photos](http://jeancflanagan.com/photos/), which I wanted 
 
 <figure class="image--narrow screenshot">
   <img
-    src="{{ site.image_url }}/{{ page.image[4].src }}" 
-    alt="{{ page.image[4].alt }}"
-  >
+    src="{{ page.image[4].src | imgix_url }}"
+    alt="{{ page.image[4].alt }}">
 </figure>
 
 #### Samples from writing layout
 
-<div class="grid grid--wide">
+<div class="grid--wide">
   <figure class="grid-figure--33 grid-figure screenshot">
     <img
-      src="{{ site.image_url }}/{{ page.image[5].src }}" 
-      alt="{{ page.image[5].alt }}"
-    >
+      src="{{ page.image[5].src | imgix_url }}"
+      alt="{{ page.image[5].alt }}">
   </figure>
   <figure class="grid-figure--66 grid-figure screenshot">
     <img
-      src="{{ site.image_url }}/{{ page.image[6].src }}" 
-      alt="{{ page.image[6].alt }}"
-    >
+      src="{{ page.image[6].src | imgix_url }}"
+      alt="{{ page.image[6].alt }}">
   </figure>
 </div>
 
@@ -132,30 +124,29 @@ Not every image is meant to be showcased, nor should every image overshadow the 
 
 <figure class="image--narrow screenshot">
   <img
-    src="{{ site.image_url }}/{{ page.image[7].src }}" 
-    alt="{{ page.image[7].alt }}"
-  >
+    src="{{ page.image[7].src | imgix_url }}"
+    alt="{{ page.image[7].alt }}">
   <figcaption>{{ page.image[7].caption | markdownify }}</figcaption>
 </figure>
 
 ### Personality
 
-We wanted to make sure that some of Jean’s interests and personality were part of the site’s design. For example, [the 404 page](http://jeancflanagan.com/404.html) has a floating jellyfish animation which echoes her interest in marine biology. 
+We wanted to make sure that some of Jean’s interests and personality were part of the site’s design. For example, [the 404 page](http://jeancflanagan.com/404.html) has a floating jellyfish animation which echoes her interest in marine biology.
 
 <div id="error-404">
   <figure class="image--wide">
-    <img src="{{ site.image_url }}/{{ page.image[8].src }}" alt="{{ page.image[8].alt }}">
+    <img src="{{ page.image[8].src }}" alt="{{ page.image[8].alt }}">
     <figcaption>{{ page.image[8].caption | markdownify }}</figcaption>
   </figure>
 </div>
 
 ## Choosing Jekyll
 
-Jean already had a personal WordPress site. I had helped her transition from the limited WordPress.com service to her own personal domain and host. However, Jean was still feeling constrained by limitations in configuration and design. I could certainly help redesign a WordPress site, but it would be a significant challenge since I have not ever made a theme from scratch, nor have I worked extensively with PHP. Building on existing themes was a sure way to end up with a compromised design with inflexibile configuration. Hacking around in WordPress would only take time away from my developing my existing strengths in responsive HTML and CSS.
+Jean already had a personal WordPress site. I had helped her transition from the limited WordPress.com service to her own personal domain and host. However, Jean was still feeling constrained by limitations in configuration and design. I could certainly help redesign a WordPress site, but it would be a significant challenge since I have not ever made a theme from scratch, nor have I worked extensively with PHP. Building on existing themes was a sure way to end up with a compromised design with inflexible configuration. Hacking around in WordPress would only take time away from my developing my existing strengths in responsive HTML and CSS.
 
 Both of us realized that WordPress was no longer a good fit. Jean wanted more control over content and flexible layouts, as well as an interface that wouldn’t involve fighting with a WYSIWYG editor or administering a content management system and database. The trade-off for ease-of-use and getting started quickly with WordPress was outweighed by a desire to publish independently and to develop a process that would be able to withstand servers misbehaving, databases being corrupted, or any of the pitfalls of locking in to a “platform”.
 
-We chose [Jekyll](http://jekyllrb.com) because it would allow for a high performance site with plenty of flexibility in design and configuration. We realized that there would be a learning curve for both of us, since I had only just gotten started with Jekyll and it would be new for Jean. A site built of flat files with neither a <abbr title="content management system">CMS</abbr> nor server-side processing is limiting for some applications, but has great advantages in performance and maintainability.[^2]
+We chose [Jekyll](http://jekyllrb.com) because it would allow for a high performance site with plenty of flexibility in design and configuration. We realized that there would be a learning curve for both of us, since I had only just gotten started with Jekyll and it would be new for Jean. A site built of flat files with neither a <abbr title="content management system">CMS</abbr> nor server-side processing is limiting for some applications, but has great advantages in performance and maintainability. [^2]
 
 ## Getting it right is difficult
 
@@ -186,6 +177,12 @@ Publishing *something* on the web is relatively easy, but designing a lasting ho
 
 {% endcapture %}
 
+{% capture endnote %}
+**[View Jean’s website live]({{ page.project.url }})** or **[check it out on GitHub]({{ page.project.source }})**.
+
+**Note:** this website is continually being updated and developed, so the information on this page is only a snapshot of it as it existed on {{ page.updated | date: '%Y-%m-%d' }}.
+{% endcapture %}
+
 <aside class="ancillary">
 {{ jean | markdownify }}
 </aside>
@@ -193,11 +190,10 @@ Publishing *something* on the web is relatively easy, but designing a lasting ho
 {{ oliver | markdownify }}
 </div>
 
-- - -
+<aside class="endnote">
+{{ endnote | markdownify }}
+</aside>
 
-**[View Jean’s website live]({{ page.project.url }})** or **[check it out on GitHub]({{ page.project.source }})**.
-
-**Note:** this website is continually being updated and developed, so the information on this page is only a snapshot of it as it existed on {{ page.updated | date: '%Y-%m-%d' }}.
 
 [^1]: Using lorem ipsum filler text encourages people reviewing the design *not* to read the text, which makes it difficult to judge legibility of body text until too late in the design process. [Nathan Ford wrote some good words](http://artequalswork.com/posts/tweeking.php) on this topic. Nathan Ford suggests reading tweets instead of ipsum, but I prefer a different approach. If I am constrained in my ability to design content-first, my current practice is to use unread content from my Instapaper queue, so my eyes will focus on trying to read in the working design or prototype.
 [^2]: I wrote more about my preference of minimal tools like Jekyll instead of tools like WordPress in [an essay on future-friendliness and robustness]({% post_url 2014-11-06-design-notes-future-friendiness-robustness %}).

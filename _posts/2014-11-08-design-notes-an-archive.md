@@ -1,12 +1,11 @@
 ---
 title: 'Designing this site: an archive'
 layout: singel
-option:
-  - index-image
-category: writing
+category: 'writing'
 tags:
   - 'archiving'
   - 'future'
+  - 'indieweb'
   - 'photography'
   - 'web'
 date: 2014-11-08 12:34
@@ -14,8 +13,9 @@ updated: 2015-03-02 21:05
 drafted: 2014-11-08 12:34
 unique_id: 2014-11-08:design-notes-an-archive
 description: 'On my approach to self-archiving.'
+image_index: /images/index/1988-oliver-young.jpg
 image:
-  - src: 1988-oliver-young.jpg
+  - src: /images/1988-oliver-young.jpg
     alt: 'Oliver as a toddler'
     caption: 'A photo taken of me in … 1988? I have no idea! This is an example of why I miss having a complete archive.'
 
@@ -25,9 +25,8 @@ Looking back at my files and memories from my life so far, I find there are few 
 
 <figure class="right">
   <img
-    src="{{ site.image_url }}/{{ page.image[0].src }}" 
-    alt="{{ page.image[0].alt }}"
-  >
+    src="{{ page.image[0].src | imgix_url: w: 450, q: 60 }}"
+    alt="{{ page.image[0].alt }}">
   <figcaption>{{ page.image[0].caption | markdownify }}</figcaption>
 </figure>
 
@@ -53,4 +52,4 @@ Git will help me keep track of versions and ensure that I lose as little data as
 
 I hope that the best way to maintain an archive that I will be happy to browse years later is to take extra effort now to design it as one. Once I have more written and archived, I look forward to the design challenge of organizing that information. Too much of the web right now is structured as “news”, or otherwise oriented toward ephemerality. I want to see more sites that treat themselves as long-lasting things, with information design and content that is built to last – not to be buried and forgotten about.
 
-I plan to share more about archiving-friendly design practices as they take form. **[Read more writing on archiving](/label/archiving/)** from this site.
+I plan to share more about archiving-friendly design practices as they take form. **[Read more writing on archiving](/labels/archiving/)** from this site.

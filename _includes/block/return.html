@@ -1,4 +1,5 @@
     <nav class="return" role="navigation">
-      <a class="return-action--home return-action action" rel="home" href="/"><div class="icon-description">Home</div><div class="return-action-logo">{% include block/logo.html %}</div></a>
-      <a class="return-action--top return-action action" href="#top">Back to top ↾</a>
+      <a class="return-action--home" rel="home" href="/#menu">Menu{% include block/logo-medium.svg.html %}</a>
+      {% if page.category and page.category != 'index' %}<a class="return-action--category background--{{ page.category }}" href="/{{ page.category }}/">/{{ page.category }}</a>{% endif %}
+      <a class="return-action--top js-backTop" href="#top">Back to top ↾</a>
     </nav>
