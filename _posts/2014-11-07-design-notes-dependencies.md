@@ -2,15 +2,13 @@
 title: 'Designing this site: an accounting of dependencies'
 layout: singel
 category: 'writing'
-option:
-  - no-imgix-source
 tags:
   - 'design'
   - 'indieweb'
   - 'jekyll'
+  - 'process'
   - 'typography'
   - 'web'
-date: 2014-11-07 12:34
 updated: 2016-02-10 22:51
 drafted: 2014-11-07 12:34
 unique_id: 2014-11-08:design-notes-dependencies

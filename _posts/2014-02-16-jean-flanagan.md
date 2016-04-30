@@ -1,6 +1,6 @@
 ---
 title: 'Website for Jean Flanagan'
-layout: dubbel
+layout: singel
 option:
   - code
   - custom-css
@@ -11,8 +11,7 @@ tags:
   - 'process'
   - 'responsive'
   - 'web'
-date: 2014-02-16 12:34
-updated: 2015-03-02 21:02
+updated: 2016-03-18 10:01
 drafted: 2014-12-03 17:10
 unique_id: 2014-02-16:jean-flanagan
 period: 2013-06 to present
@@ -72,25 +71,22 @@ The first thing we started out with were full-length articles about science, alr
 
 Designing in a browser meant that HTML prototypes were an early part of the process, right after sketching and rough notes. In the first week of active development, prototype code was being written that would evolve into the finished product.
 
-<figure class="image--narrow screenshot">
-  <img
-    src="{{ page.image[1].src | imgix_url }}"
-    alt="{{ page.image[1].alt }}">
-  <figcaption>{{ page.image[1].caption | markdownify }}</figcaption>
+<figure class="image screenshot">
+  {% assign image = page.image[1] %}
+  {% include block/image--imgix.html %}
+  {% include block/figcaption--image.html %}
 </figure>
 
-<figure class="image--narrow screenshot">
-  <img
-    src="{{ page.image[2].src | imgix_url }}"
-    alt="{{ page.image[2].alt }}">
-  <figcaption>{{ page.image[2].caption | markdownify }}</figcaption>
+<figure class="image screenshot">
+  {% assign image = page.image[2] %}
+  {% include block/image--imgix.html %}
+  {% include block/figcaption--image.html %}
 </figure>
 
 <figure class="image--wide screenshot">
-  <img
-    src="{{ page.image[3].src | imgix_url }}"
-    alt="{{ page.image[3].alt }}">
-  <figcaption>{{ page.image[3].caption | markdownify }}</figcaption>
+  {% assign image = page.image[3] %}
+  {% include block/image--imgix.html %}
+  {% include block/figcaption--image.html %}
 </figure>
 
 ### Flexible layout for long writing and featured photography
@@ -99,34 +95,30 @@ Jean takes [beautiful photos](http://jeancflanagan.com/photos/), which I wanted 
 
 #### Sample from photo layout
 
-<figure class="image--narrow screenshot">
-  <img
-    src="{{ page.image[4].src | imgix_url }}"
-    alt="{{ page.image[4].alt }}">
+<figure class="image screenshot">
+  {% assign image = page.image[4] %}
+  {% include block/image--imgix.html %}
 </figure>
 
 #### Samples from writing layout
 
 <div class="grid--wide">
-  <figure class="grid-figure--33 grid-figure screenshot">
-    <img
-      src="{{ page.image[5].src | imgix_url }}"
-      alt="{{ page.image[5].alt }}">
+  <figure class="grid-figure--33 screenshot">
+    {% assign image = page.image[5] %}
+    {% include block/image--imgix.html %}
   </figure>
-  <figure class="grid-figure--66 grid-figure screenshot">
-    <img
-      src="{{ page.image[6].src | imgix_url }}"
-      alt="{{ page.image[6].alt }}">
+  <figure class="grid-figure--66 screenshot">
+    {% assign image = page.image[6] %}
+    {% include block/image--imgix.html %}
   </figure>
 </div>
 
 Not every image is meant to be showcased, nor should every image overshadow the writing. For complementary images in writing posts, I crafted alternative styles for right/left floated images for large screens. These optional styles are automated through a [Jekyll figure/image plugin](https://github.com/opattison/jekyll-figure-image-tag) that I wrote. The styles are flexible, reusable, and easy to maintain as well.
 
-<figure class="image--narrow screenshot">
-  <img
-    src="{{ page.image[7].src | imgix_url }}"
-    alt="{{ page.image[7].alt }}">
-  <figcaption>{{ page.image[7].caption | markdownify }}</figcaption>
+<figure class="image screenshot">
+  {% assign image = page.image[7] %}
+  {% include block/image--imgix.html %}
+  {% include block/figcaption--image.html %}
 </figure>
 
 ### Personality
@@ -135,8 +127,9 @@ We wanted to make sure that some of Jean’s interests and personality were part
 
 <div id="error-404">
   <figure class="image--wide">
-    <img src="{{ page.image[8].src }}" alt="{{ page.image[8].alt }}">
-    <figcaption>{{ page.image[8].caption | markdownify }}</figcaption>
+    {% assign image = page.image[8] %}
+    {% include block/image.html %}
+    {% include block/figcaption--image.html %}
   </figure>
 </div>
 
@@ -152,22 +145,10 @@ We chose [Jekyll](http://jekyllrb.com) because it would allow for a high perform
 
 Publishing *something* on the web is relatively easy, but designing a lasting home for creative output that you won’t be forced to abandon or migrate later takes a significant amount of time and effort. For this project, both design and content were weighed deliberately. Working **content first** informed the design. The layout, typography and other design elements had to suit the content well.
 
-{% capture oliver %}
-
-## What I learned from this project
-
-- That Jekyll is fast and I love using it to design and build a website.
-- How to set up a Jekyll site for personal publishing, with processes that would inspire me to create my own site.
-- How to use [GitHub Issues](https://github.com/opattison/jeancflanagan/issues) to communicate in real time about the process, organize collaborative work, and document the history of the project.
-- That working with development environments and version control is essential for a collaborative project, even if only two people are involved and their roles are well-defined.
-- That designing for yourself or someone close to you takes time – in this case, our personal time. (This process took months longer than we thought it might initially, but it ended up being worth additional effort to get certain design and content elements done *right*.)
-
-{% endcapture %}
-
 {% capture jean %}
 # What Jean learned from this project
 
-<i>by <cite><a href="http://jeanflanagan.com">Jean Flanagan</a></cite></i>
+<i>by <cite><a href="http://jeancflanagan.com">Jean Flanagan</a></cite></i>
 
 - How to use Jekyll, Git, GitHub, and a command line interface.
 - How photo file sizes, fonts, and more affect a website's performance.
@@ -177,23 +158,28 @@ Publishing *something* on the web is relatively easy, but designing a lasting ho
 
 {% endcapture %}
 
-{% capture endnote %}
-**[View Jean’s website live]({{ page.project.url }})** or **[check it out on GitHub]({{ page.project.source }})**.
-
-**Note:** this website is continually being updated and developed, so the information on this page is only a snapshot of it as it existed on {{ page.updated | date: '%Y-%m-%d' }}.
-{% endcapture %}
-
 <aside class="ancillary">
 {{ jean | markdownify }}
 </aside>
-<div class="flow--side">
-{{ oliver | markdownify }}
-</div>
 
-<aside class="endnote">
+## What I learned from this project
+
+- That Jekyll is fast and I love using it to design and build a website.
+- How to set up a Jekyll site for personal publishing, with processes that would inspire me to create my own site.
+- How to use [GitHub Issues](https://github.com/opattison/jeancflanagan/issues) to communicate in real time about the process, organize collaborative work, and document the history of the project.
+- That working with development environments and version control is essential for a collaborative project, even if only two people are involved and their roles are well-defined.
+- That designing for yourself or someone close to you takes time – in this case, our personal time. (This process took months longer than we thought it might initially, but it ended up being worth additional effort to get certain design and content elements done *right*.)
+
+{% capture endnote %}
+**[View Jean’s website live]({{ page.project.url }})** or **[check it out on GitHub]({{ page.project.source }})**.
+
+**Note:** this website is continually being updated and developed, so the information on this page is only a snapshot of it as it existed on 2015-03-02.
+{% endcapture %}
+
+<aside class="ancillary--endnotes">
 {{ endnote | markdownify }}
 </aside>
 
 
-[^1]: Using lorem ipsum filler text encourages people reviewing the design *not* to read the text, which makes it difficult to judge legibility of body text until too late in the design process. [Nathan Ford wrote some good words](http://artequalswork.com/posts/tweeking.php) on this topic. Nathan Ford suggests reading tweets instead of ipsum, but I prefer a different approach. If I am constrained in my ability to design content-first, my current practice is to use unread content from my Instapaper queue, so my eyes will focus on trying to read in the working design or prototype.
+[^1]: Using lorem ipsum filler text encourages people reviewing the design *not* to read the text, which makes it difficult to judge legibility of body text until too late in the design process. [Nathan Ford wrote some good words](http://artequalswork.com/posts/tweeking.php) on this topic. Nathan Ford suggests reading tweets instead of ipsum, but I prefer a different approach. If I am constrained in my ability to design content-first, [my current practice]({% post_url 2014-12-19-reading-driven-design %}) is to use unread content from my Instapaper queue, so my eyes will focus on trying to read in the working design or prototype.
 [^2]: I wrote more about my preference of minimal tools like Jekyll instead of tools like WordPress in [an essay on future-friendliness and robustness]({% post_url 2014-11-06-design-notes-future-friendiness-robustness %}).

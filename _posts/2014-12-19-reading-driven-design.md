@@ -2,15 +2,12 @@
 title: 'Reading-driven design'
 layout: singel
 category: 'writing'
-option:
-  - no-imgix-source
 tags:
   - 'css'
   - 'design'
   - 'reading'
   - 'typography'
   - 'web'
-date: 2014-12-19 23:14
 updated: 2016-01-26 23:14
 drafted: 2014-12-19 15:59
 unique_id: 2014-12-19:reading-driven-design
@@ -24,6 +21,7 @@ image:
   - src: /images/2014-11-02-green-arabia-reading-driven-design.jpg
     alt: 'A screenshot of an early version of this website'
     caption: 'This is an example of a development version of this website borrowing from the essay [“Green Arabia”](http://idlewords.com/2014/08/green_arabia.htm) by Maciej Cegłowski to test layout and typography.'
+    quality: 70
 
 ---
 
@@ -42,10 +40,9 @@ Visitors to a website typically have a key difference in experience from those w
 My solution is to use writing that I want to read anyway. For me, that is my [Instapaper](https://www.instapaper.com) queue. I find an article that I have been intending to read that is roughly in the style of the content that the site will have. This is challenging, but it is usually possible to find something in the same vein as the target content, even if that content hasn’t been written yet. For this site, I tested the design with a mix of narrative essays and some of my own technical notes.
 
 <figure class="screenshot image">
-    {% assign count = 1 %}
-    {% assign quality = 70 %}
-    {% include block/srcset_grid2.html %}
-  <figcaption>{{ page.image[1].caption | markdownify }}</figcaption>
+  {% assign image = page.image[1] %}
+  {% include block/srcset--grid2.html %}
+  {% include block/figcaption--image.html %}
 </figure>
 
 Key elements to look for are word length, paragraph length, and the use of key HTML elements such as lists, emphasis, hyperlinks and images. These features can have a strong influence on line length, vertical rhythm, relative proportions, color, and typeface.

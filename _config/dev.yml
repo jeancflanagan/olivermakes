@@ -1,8 +1,6 @@
-# Site configuration
-
-## Imgix configuration
-imgix:
-  source: dev-olivermakes.imgix.net
+## Configuration URLs
+domain: dev.olivermak.es
+url: https://dev.olivermak.es
 
 ## Sass configuration
 sass:
